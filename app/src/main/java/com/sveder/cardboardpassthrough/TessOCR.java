@@ -1,7 +1,5 @@
 package com.sveder.cardboardpassthrough;
 
-import android.graphics.Bitmap;
-
 import com.googlecode.leptonica.android.Pix;
 import com.googlecode.tesseract.android.TessBaseAPI;
 public class TessOCR {
@@ -10,7 +8,7 @@ public class TessOCR {
     public TessOCR(String datapath) {
         // TODO Auto-generated constructor stub
         mTess = new TessBaseAPI();
-        String language = "eng";
+        String language = "fra";
         mTess.init(datapath, language);
     }
 

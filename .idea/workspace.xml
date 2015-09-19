@@ -10,14 +10,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6ea0ebc5-e008-44c5-9265-cc4e435cfe3a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/sveder/cardboardpassthrough/MainActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/sveder/cardboardpassthrough/MainActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/sveder/cardboardpassthrough/MainActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/sveder/cardboardpassthrough/MainActivity$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/sveder/cardboardpassthrough/MainActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/sveder/cardboardpassthrough/MainActivity$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/sveder/cardboardpassthrough/MainActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/sveder/cardboardpassthrough/MainActivity.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/dex/debug/classes.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/debug/classes.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/sveder/cardboardpassthrough/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/sveder/cardboardpassthrough/MainActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/sveder/cardboardpassthrough/TessOCR.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/sveder/cardboardpassthrough/TessOCR.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/sveder/cardboardpassthrough/Translate.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/sveder/cardboardpassthrough/Translate.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -47,26 +43,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/sveder/cardboardpassthrough/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.925926">
-              <caret line="455" column="32" selection-start-line="455" selection-start-column="27" selection-end-line="455" selection-end-column="32" />
+            <state vertical-scroll-proportion="0.77544427">
+              <caret line="32" column="56" selection-start-line="32" selection-start-column="56" selection-end-line="32" selection-end-column="56" />
               <folding>
                 <element signature="e#0#16229#0" expanded="true" />
-                <element signature="imports" expanded="true" />
-                <element signature="e#7974#8207#0" expanded="true" />
-                <element signature="e#8206#8207#0" expanded="true" />
                 <element signature="e#8483#8753#0" expanded="true" />
                 <element signature="e#8752#8753#0" expanded="true" />
-                <element signature="e#8898#8899#0" expanded="true" />
-                <element signature="e#8952#8953#0" expanded="true" />
-                <element signature="e#10073#10074#0" expanded="true" />
-                <element signature="e#10142#10143#0" expanded="true" />
-                <element signature="e#11551#11552#0" expanded="true" />
-                <element signature="e#11599#11600#0" expanded="true" />
-                <element signature="e#11672#11673#0" expanded="true" />
-                <element signature="e#11718#11719#0" expanded="true" />
                 <element signature="e#15806#15807#0" expanded="true" />
                 <element signature="e#15852#15853#0" expanded="true" />
               </folding>
@@ -74,21 +59,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Translate.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Translate.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/sveder/cardboardpassthrough/Translate.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5650155">
-              <caret line="48" column="31" selection-start-line="48" selection-start-column="31" selection-end-line="48" selection-end-column="31" />
-              <folding />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="29" column="97" selection-start-line="29" selection-start-column="97" selection-end-line="29" selection-end-column="97" />
+              <folding>
+                <element signature="e#781#2294#0" expanded="true" />
+                <element signature="e#2293#2294#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <file leaf-file-name="TessOCR.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/sveder/cardboardpassthrough/TessOCR.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -2225,8 +2213,9 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/sveder/cardboardpassthrough/WorldLayoutData.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/sveder/cardboardpassthrough/CardboardOverlayView.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/common_ui.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/sveder/cardboardpassthrough/Translate.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/sveder/cardboardpassthrough/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/sveder/cardboardpassthrough/TessOCR.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/sveder/cardboardpassthrough/Translate.java" />
       </list>
     </option>
   </component>
@@ -2329,28 +2318,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="cardboardpassthrough" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HTN2015" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cardboardpassthrough" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DataWrapper.java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -2653,7 +2620,15 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="5" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/sveder/cardboardpassthrough/MainActivity.java</url>
+          <line>246</line>
+          <properties />
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="7" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -2664,19 +2639,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#16229#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-            <element signature="e#7974#8207#0" expanded="true" />
-            <element signature="e#8206#8207#0" expanded="true" />
             <element signature="e#8483#8753#0" expanded="true" />
             <element signature="e#8752#8753#0" expanded="true" />
-            <element signature="e#8898#8899#0" expanded="true" />
-            <element signature="e#8952#8953#0" expanded="true" />
-            <element signature="e#10073#10074#0" expanded="true" />
-            <element signature="e#10142#10143#0" expanded="true" />
-            <element signature="e#11551#11552#0" expanded="true" />
-            <element signature="e#11599#11600#0" expanded="true" />
-            <element signature="e#11672#11673#0" expanded="true" />
-            <element signature="e#11718#11719#0" expanded="true" />
             <element signature="e#15806#15807#0" expanded="true" />
             <element signature="e#15852#15853#0" expanded="true" />
           </folding>
@@ -2745,14 +2709,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.thalmic/myosdk/0.10.0/jars/classes.jar!/com/thalmic/myo/Pose.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.09693053">
@@ -2769,36 +2725,60 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/sveder/cardboardpassthrough/MainActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.925926">
-          <caret line="455" column="32" selection-start-line="455" selection-start-column="27" selection-end-line="455" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#16229#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-            <element signature="e#7974#8207#0" expanded="true" />
-            <element signature="e#8206#8207#0" expanded="true" />
-            <element signature="e#8483#8753#0" expanded="true" />
-            <element signature="e#8752#8753#0" expanded="true" />
-            <element signature="e#8898#8899#0" expanded="true" />
-            <element signature="e#8952#8953#0" expanded="true" />
-            <element signature="e#10073#10074#0" expanded="true" />
-            <element signature="e#10142#10143#0" expanded="true" />
-            <element signature="e#11551#11552#0" expanded="true" />
-            <element signature="e#11599#11600#0" expanded="true" />
-            <element signature="e#11672#11673#0" expanded="true" />
-            <element signature="e#11718#11719#0" expanded="true" />
-            <element signature="e#15806#15807#0" expanded="true" />
-            <element signature="e#15852#15853#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.20897833">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/sveder/cardboardpassthrough/DataWrapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.18575852">
+          <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/sveder/cardboardpassthrough/OcrAsyncTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3018576">
+          <caret line="30" column="24" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/sveder/cardboardpassthrough/TessOCR.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/sveder/cardboardpassthrough/Translate.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5650155">
-          <caret line="48" column="31" selection-start-line="48" selection-start-column="31" selection-end-line="48" selection-end-column="31" />
-          <folding />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="97" selection-start-line="29" selection-start-column="97" selection-end-line="29" selection-end-column="97" />
+          <folding>
+            <element signature="e#781#2294#0" expanded="true" />
+            <element signature="e#2293#2294#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/sveder/cardboardpassthrough/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.77544427">
+          <caret line="32" column="56" selection-start-line="32" selection-start-column="56" selection-end-line="32" selection-end-column="56" />
+          <folding>
+            <element signature="e#0#16229#0" expanded="true" />
+            <element signature="e#8483#8753#0" expanded="true" />
+            <element signature="e#8752#8753#0" expanded="true" />
+            <element signature="e#15806#15807#0" expanded="true" />
+            <element signature="e#15852#15853#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

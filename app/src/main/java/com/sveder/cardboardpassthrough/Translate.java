@@ -27,7 +27,7 @@ public class Translate {
                     return;
                 }
                 String excerpt = (String) o;
-                TranslateAsyncTask translateAsyncTask = new TranslateAsyncTask(excerpt, "EN", "FR", new TranslateAsyncTask.Callback() {
+                TranslateAsyncTask translateAsyncTask = new TranslateAsyncTask(excerpt, "FR", "EN", new TranslateAsyncTask.Callback() {
                     @Override
                     public void onComplete(Object o, Error error) {
                         if (error != null) {
