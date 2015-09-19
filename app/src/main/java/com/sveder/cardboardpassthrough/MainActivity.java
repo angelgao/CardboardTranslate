@@ -65,6 +65,7 @@ public class MainActivity extends CardboardActivity implements CardboardView.Ste
     private Camera.PictureCallback mPicture;
     private Button takePicture;
     private DeviceListener mListener;
+    int currentZoomLevel = 0;
 
     private final String vertexShaderCode =
             "attribute vec4 position;" +
@@ -273,6 +274,15 @@ public class MainActivity extends CardboardActivity implements CardboardView.Ste
             @Override
             public void onPose(Myo myo, long timestamp, Pose pose) {
                 showToast("Pose: " + pose);
+                if (camera != null) {
+                    if (pose == Pose.FIST) {
+                        currentZoomLevel++;
+                        camera.startSmoothZoom(currentZoomLevel);
+                    } else if (pose == Pose.FINGERS_SPREAD) {
+                        currentZoomLevel--;
+                        camera.startSmoothZoom(currentZoomLevel);
+                    }
+                }
             }
         };
 
