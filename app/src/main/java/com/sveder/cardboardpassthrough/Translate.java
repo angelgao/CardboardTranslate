@@ -1,17 +1,14 @@
 package com.sveder.cardboardpassthrough;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Environment;
 import android.util.Log;
+import android.widget.Toast;
 
 import java.io.File;
 
-/**
- * Created by Eric on 2015-09-19.
- */
 public class Translate {
     public static final String DOWNLOAD_BASE = "http://tesseract-ocr.googlecode.com/files/";
     private static final String TAG = "TRANSLATE";
@@ -25,6 +22,7 @@ public class Translate {
             @Override
             public void onComplete(Object o, Error error) {
                 if (error != null) {
+                    Toast.makeText(activity, "OCR Error: " + error.getMessage(), Toast.LENGTH_SHORT).show();
                     Log.e("OcrAsyncTask", error.getMessage());
                     return;
                 }
@@ -33,11 +31,15 @@ public class Translate {
                     @Override
                     public void onComplete(Object o, Error error) {
                         if (error != null) {
+                            Toast.makeText(activity, "Translate Error: " + error.getMessage(), Toast.LENGTH_SHORT).show();
                             Log.e("TranslateAsyncTask", error.getMessage());
                             return;
                         }
                         DataWrapper translation = (DataWrapper) o;
                         translatedText = translation.data.translations.get(0).translatedText;
+//                        Toast.makeText(activity, translatedText, Toast.LENGTH_SHORT).show();
+                        MainActivity main = (MainActivity) activity;
+                        main.showText(translatedText);
                         Log.e("TranslateAsyncTask", translatedText);
                     }
                 });

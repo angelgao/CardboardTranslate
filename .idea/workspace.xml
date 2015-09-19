@@ -10,18 +10,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6ea0ebc5-e008-44c5-9265-cc4e435cfe3a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gradle/gradle/wrapper/gradle-wrapper.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/libs/jtar-1.1.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/sveder/cardboardpassthrough/DataWrapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/sveder/cardboardpassthrough/OcrAsyncTask.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/sveder/cardboardpassthrough/OcrInitAsyncTask.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/sveder/cardboardpassthrough/TessOCR.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/sveder/cardboardpassthrough/Translate.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/sveder/cardboardpassthrough/TranslateAsyncTask.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gradle/gradle/wrapper/gradle-wrapper.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gradle/gradle.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gradle/gradlew.bat" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gradle/gradlew" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/sveder/cardboardpassthrough/MainActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/sveder/cardboardpassthrough/MainActivity$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/sveder/cardboardpassthrough/MainActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/sveder/cardboardpassthrough/MainActivity$2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/sveder/cardboardpassthrough/MainActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/sveder/cardboardpassthrough/MainActivity$3.class" />
@@ -29,15 +17,8 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/dex/debug/classes.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/debug/classes.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HTN2015.iml" afterPath="$PROJECT_DIR$/HTN2015.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/sveder/cardboardpassthrough/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/sveder/cardboardpassthrough/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/settings.gradle" afterPath="$PROJECT_DIR$/settings.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/sveder/cardboardpassthrough/Translate.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/sveder/cardboardpassthrough/Translate.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="HTN2015.iws" />
@@ -66,25 +47,39 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/sveder/cardboardpassthrough/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.375">
-              <caret line="30" column="24" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
+            <state vertical-scroll-proportion="-12.925926">
+              <caret line="455" column="32" selection-start-line="455" selection-start-column="27" selection-end-line="455" selection-end-column="32" />
               <folding>
-                <element signature="e#7974#8168#0" expanded="true" />
-                <element signature="e#8167#8168#0" expanded="true" />
-                <element signature="e#8444#8714#0" expanded="true" />
-                <element signature="e#8713#8714#0" expanded="true" />
-                <element signature="e#8859#8860#0" expanded="true" />
-                <element signature="e#8913#8914#0" expanded="true" />
-                <element signature="e#10248#10249#0" expanded="true" />
-                <element signature="e#10317#10318#0" expanded="true" />
-                <element signature="e#11725#11726#0" expanded="true" />
-                <element signature="e#11773#11774#0" expanded="true" />
-                <element signature="e#11846#11847#0" expanded="true" />
-                <element signature="e#11892#11893#0" expanded="true" />
+                <element signature="e#0#16229#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#7974#8207#0" expanded="true" />
+                <element signature="e#8206#8207#0" expanded="true" />
+                <element signature="e#8483#8753#0" expanded="true" />
+                <element signature="e#8752#8753#0" expanded="true" />
+                <element signature="e#8898#8899#0" expanded="true" />
+                <element signature="e#8952#8953#0" expanded="true" />
+                <element signature="e#10073#10074#0" expanded="true" />
+                <element signature="e#10142#10143#0" expanded="true" />
+                <element signature="e#11551#11552#0" expanded="true" />
+                <element signature="e#11599#11600#0" expanded="true" />
+                <element signature="e#11672#11673#0" expanded="true" />
+                <element signature="e#11718#11719#0" expanded="true" />
+                <element signature="e#15806#15807#0" expanded="true" />
+                <element signature="e#15852#15853#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Translate.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/sveder/cardboardpassthrough/Translate.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5650155">
+              <caret line="48" column="31" selection-start-line="48" selection-start-column="31" selection-end-line="48" selection-end-column="31" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -2230,6 +2225,7 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/sveder/cardboardpassthrough/WorldLayoutData.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/sveder/cardboardpassthrough/CardboardOverlayView.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/common_ui.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/sveder/cardboardpassthrough/Translate.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/sveder/cardboardpassthrough/MainActivity.java" />
       </list>
     </option>
@@ -2315,6 +2311,46 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HTN2015" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cardboardpassthrough" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HTN2015" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cardboardpassthrough" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DataWrapper.java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -2545,7 +2581,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="790" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -2558,7 +2594,7 @@
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32937685" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.6454006" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6454006" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -2627,18 +2663,22 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#7974#8168#0" expanded="true" />
-            <element signature="e#8167#8168#0" expanded="true" />
-            <element signature="e#8444#8714#0" expanded="true" />
-            <element signature="e#8713#8714#0" expanded="true" />
-            <element signature="e#8859#8860#0" expanded="true" />
-            <element signature="e#8913#8914#0" expanded="true" />
-            <element signature="e#10248#10249#0" expanded="true" />
-            <element signature="e#10317#10318#0" expanded="true" />
-            <element signature="e#11725#11726#0" expanded="true" />
-            <element signature="e#11773#11774#0" expanded="true" />
-            <element signature="e#11846#11847#0" expanded="true" />
-            <element signature="e#11892#11893#0" expanded="true" />
+            <element signature="e#0#16229#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#7974#8207#0" expanded="true" />
+            <element signature="e#8206#8207#0" expanded="true" />
+            <element signature="e#8483#8753#0" expanded="true" />
+            <element signature="e#8752#8753#0" expanded="true" />
+            <element signature="e#8898#8899#0" expanded="true" />
+            <element signature="e#8952#8953#0" expanded="true" />
+            <element signature="e#10073#10074#0" expanded="true" />
+            <element signature="e#10142#10143#0" expanded="true" />
+            <element signature="e#11551#11552#0" expanded="true" />
+            <element signature="e#11599#11600#0" expanded="true" />
+            <element signature="e#11672#11673#0" expanded="true" />
+            <element signature="e#11718#11719#0" expanded="true" />
+            <element signature="e#15806#15807#0" expanded="true" />
+            <element signature="e#15852#15853#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2731,22 +2771,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/sveder/cardboardpassthrough/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.375">
-          <caret line="30" column="24" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
+        <state vertical-scroll-proportion="-12.925926">
+          <caret line="455" column="32" selection-start-line="455" selection-start-column="27" selection-end-line="455" selection-end-column="32" />
           <folding>
-            <element signature="e#7974#8168#0" expanded="true" />
-            <element signature="e#8167#8168#0" expanded="true" />
-            <element signature="e#8444#8714#0" expanded="true" />
-            <element signature="e#8713#8714#0" expanded="true" />
-            <element signature="e#8859#8860#0" expanded="true" />
-            <element signature="e#8913#8914#0" expanded="true" />
-            <element signature="e#10248#10249#0" expanded="true" />
-            <element signature="e#10317#10318#0" expanded="true" />
-            <element signature="e#11725#11726#0" expanded="true" />
-            <element signature="e#11773#11774#0" expanded="true" />
-            <element signature="e#11846#11847#0" expanded="true" />
-            <element signature="e#11892#11893#0" expanded="true" />
+            <element signature="e#0#16229#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#7974#8207#0" expanded="true" />
+            <element signature="e#8206#8207#0" expanded="true" />
+            <element signature="e#8483#8753#0" expanded="true" />
+            <element signature="e#8752#8753#0" expanded="true" />
+            <element signature="e#8898#8899#0" expanded="true" />
+            <element signature="e#8952#8953#0" expanded="true" />
+            <element signature="e#10073#10074#0" expanded="true" />
+            <element signature="e#10142#10143#0" expanded="true" />
+            <element signature="e#11551#11552#0" expanded="true" />
+            <element signature="e#11599#11600#0" expanded="true" />
+            <element signature="e#11672#11673#0" expanded="true" />
+            <element signature="e#11718#11719#0" expanded="true" />
+            <element signature="e#15806#15807#0" expanded="true" />
+            <element signature="e#15852#15853#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/sveder/cardboardpassthrough/Translate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5650155">
+          <caret line="48" column="31" selection-start-line="48" selection-start-column="31" selection-end-line="48" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>

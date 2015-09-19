@@ -231,6 +231,7 @@ public class MainActivity extends CardboardActivity implements CardboardView.Ste
             @Override
             public void onPictureTaken(byte[] data, Camera camera) {
                 translateImage(data, activity);
+                camera.startPreview();
             }
         };
 
@@ -262,14 +263,10 @@ public class MainActivity extends CardboardActivity implements CardboardView.Ste
 
             @Override
             public void onPose(Myo myo, long timestamp, Pose pose) {
-                showToast("Pose: " + pose);
+//                showToast("Pose: " + pose);
                 if (camera != null) {
-                    if (pose == Pose.FIST) {
-                        currentZoomLevel++;
-                        camera.startSmoothZoom(currentZoomLevel);
-                    } else if (pose == Pose.FINGERS_SPREAD) {
-                        currentZoomLevel--;
-                        camera.startSmoothZoom(currentZoomLevel);
+                    if (pose != Pose.REST) {
+                        camera.takePicture(null, null, mPicture);
                     }
                 }
             }
@@ -329,7 +326,7 @@ public class MainActivity extends CardboardActivity implements CardboardView.Ste
 
 
     @Override
-    protected void onResume(){
+    protected void onResume() {
         super.onResume();
         // Do OCR engine initialization, if necessary
         initOcrIfNecessary(this, "eng");
@@ -453,6 +450,10 @@ public class MainActivity extends CardboardActivity implements CardboardView.Ste
 
     @Override
     public void onCardboardTrigger() {
+    }
+
+    public void showText(String text) {
+        mOverlayView.show3DToast(text);
     }
 
 //    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
