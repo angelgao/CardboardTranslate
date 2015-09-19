@@ -24,7 +24,7 @@ dependencies {
 
     repositories {
         maven {
-            url '/Users/Andy/Dropbox/Projects/MyoTest/app/libs/myo-android-sdk-0.10.0/myorepository'
+            url 'libs/myorepository'
         }
     }
 
