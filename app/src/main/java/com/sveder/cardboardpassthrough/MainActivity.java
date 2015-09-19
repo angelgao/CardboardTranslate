@@ -16,6 +16,7 @@
 
 package com.sveder.cardboardpassthrough;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.graphics.SurfaceTexture;
 import android.graphics.SurfaceTexture.OnFrameAvailableListener;
@@ -42,8 +43,6 @@ import com.thalmic.myo.Pose;
 import com.thalmic.myo.scanner.ScanActivity;
 
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
@@ -54,6 +53,9 @@ import java.util.Date;
 
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
+
+import static com.sveder.cardboardpassthrough.Translate.initOcrIfNecessary;
+import static com.sveder.cardboardpassthrough.Translate.translateImage;
 
 public class MainActivity extends CardboardActivity implements CardboardView.StereoRenderer, OnFrameAvailableListener {
 
@@ -223,25 +225,12 @@ public class MainActivity extends CardboardActivity implements CardboardView.Ste
         mCamera = new float[16];
         mView = new float[16];
 
+        final Activity activity = this;
         mPicture = new Camera.PictureCallback() {
 
             @Override
             public void onPictureTaken(byte[] data, Camera camera) {
-
-                File pictureFile = getOutputMediaFile();
-                if (pictureFile == null) {
-                    return;
-                }
-
-                try {
-                    FileOutputStream fos = new FileOutputStream(pictureFile);
-                    fos.write(data);
-                    fos.close();
-                } catch (FileNotFoundException e) {
-                    Log.d(TAG, "File not found: " + e.getMessage());
-                } catch (IOException e) {
-                    Log.d(TAG, "Error accessing file: " + e.getMessage());
-                }
+                translateImage(data, activity);
             }
         };
 
@@ -336,6 +325,15 @@ public class MainActivity extends CardboardActivity implements CardboardView.Ste
                 "IMG_" + timeStamp + ".jpg");
 
         return mediaFile;
+    }
+
+
+    @Override
+    protected void onResume(){
+        super.onResume();
+        // Do OCR engine initialization, if necessary
+        initOcrIfNecessary(this, "eng");
+        initOcrIfNecessary(this, "fra");
     }
 
     @Override
