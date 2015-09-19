@@ -16,6 +16,7 @@
 
 package com.sveder.cardboardpassthrough;
 
+import android.content.Intent;
 import android.graphics.SurfaceTexture;
 import android.graphics.SurfaceTexture.OnFrameAvailableListener;
 import android.hardware.Camera;
@@ -26,13 +27,19 @@ import android.os.Environment;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.google.vrtoolkit.cardboard.CardboardActivity;
 import com.google.vrtoolkit.cardboard.CardboardView;
 import com.google.vrtoolkit.cardboard.EyeTransform;
 import com.google.vrtoolkit.cardboard.HeadTransform;
 import com.google.vrtoolkit.cardboard.Viewport;
+import com.thalmic.myo.AbstractDeviceListener;
+import com.thalmic.myo.DeviceListener;
 import com.thalmic.myo.Hub;
+import com.thalmic.myo.Myo;
+import com.thalmic.myo.Pose;
+import com.thalmic.myo.scanner.ScanActivity;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -51,11 +58,13 @@ import javax.microedition.khronos.opengles.GL10;
 public class MainActivity extends CardboardActivity implements CardboardView.StereoRenderer, OnFrameAvailableListener {
 
     private static final String TAG = "MainActivity";
+    private static final int CONNECT_MYO_REQUEST = 1;
 
     private static final int GL_TEXTURE_EXTERNAL_OES = 0x8D65;
     private Camera camera;
     private Camera.PictureCallback mPicture;
     private Button takePicture;
+    private DeviceListener mListener;
 
     private final String vertexShaderCode =
             "attribute vec4 position;" +
@@ -249,14 +258,45 @@ public class MainActivity extends CardboardActivity implements CardboardView.Ste
                 }
         );
 
+        mListener = new AbstractDeviceListener() {
+            @Override
+            public void onConnect(Myo myo, long timestamp) {
+                showToast("Connected");
+            }
+
+            @Override
+            public void onDisconnect(Myo myo, long timestamp) {
+                showToast("Disconnected");
+
+            }
+
+            @Override
+            public void onPose(Myo myo, long timestamp, Pose pose) {
+                showToast("Pose: " + pose);
+            }
+        };
+
         Hub hub = Hub.getInstance();
         if (!hub.init(this)) {
             finish();
             return;
         }
 
-        Hub.getInstance().attachToAdjacentMyo();
+        // Disable standard Myo locking policy. All poses will be delivered.
+        hub.setLockingPolicy(Hub.LockingPolicy.NONE);
+        // Next, register for DeviceListener callbacks.
+        hub.addListener(mListener);
+        // Finally, scan for Myo devices and connect to the first one found that is very near.
+//        hub.attachToAdjacentMyo();
+//
+        Intent intent = new Intent(this, ScanActivity.class);
+        startActivity(intent);
 
+
+    }
+
+    private void showToast(String text) {
+        Toast.makeText(this, text, Toast.LENGTH_SHORT).show();
     }
 
     /**
@@ -406,5 +446,13 @@ public class MainActivity extends CardboardActivity implements CardboardView.Ste
     @Override
     public void onCardboardTrigger() {
     }
+
+//    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+//        if (requestCode == CONNECT_MYO_REQUEST) {
+//            Hub.getInstance().setLockingPolicy(Hub.LockingPolicy.NONE);
+//            Hub.getInstance().addListener(mListener);
+//            Toast.makeText(getParent(), "Connected", Toast.LENGTH_SHORT).show();
+//        }
+//    }
 
 }
