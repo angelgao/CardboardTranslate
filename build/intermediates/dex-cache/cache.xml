@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/Andy/Dropbox/Projects/CardBoardTest/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/jars/libs/internal_impl-22.0.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="b5b92f469d515a13d778900f6d50c03d12f35504">
+        <dex dex="/Users/Andy/Dropbox/Projects/CardBoardTest/app/build/intermediates/pre-dexed/debug/internal_impl-22.0.0-f9400dc8bc6a40d758adc1c58ec6dd5b3a0f7ad3.jar" />
+    </item>
+    <item
+        jar="/Users/Andy/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/22.0.0/support-annotations-22.0.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="685d0b2c590447e85284ed84712cb363ba04eff8">
+        <dex dex="/Users/Andy/Dropbox/Projects/CardBoardTest/app/build/intermediates/pre-dexed/debug/support-annotations-22.0.0-5d6e132d56475ab28a48a8289a50fd570fb456cc.jar" />
+    </item>
+    <item
+        jar="/Users/Andy/Dropbox/Projects/CardBoardTest/app/build/intermediates/exploded-aar/com.thalmic/myosdk/0.10.0/jars/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="d189db75174a41996c33bb243d2228aacf10fa53">
+        <dex dex="/Users/Andy/Dropbox/Projects/CardBoardTest/app/build/intermediates/pre-dexed/debug/classes-fdf1687cee188e3637e9196372699436fe63cf45.jar" />
+    </item>
+    <item
+        jar="/Users/Andy/Dropbox/Projects/HTN2015/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/jars/libs/internal_impl-22.0.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="b5b92f469d515a13d778900f6d50c03d12f35504">
+        <dex dex="/Users/Andy/Dropbox/Projects/HTN2015/app/build/intermediates/pre-dexed/debug/internal_impl-22.0.0-7dd5ae5dcebaf6c86cc7d28e6f36745806a3be33.jar" />
+    </item>
+    <item
+        jar="/Users/Andy/Dropbox/Projects/HTN2015/app/libs/cardboard.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="7800973ef52ae629978ad974370b6a0b9bc79e25">
+        <dex dex="/Users/Andy/Dropbox/Projects/HTN2015/app/build/intermediates/pre-dexed/debug/cardboard-40834b8c31a2d222ab228ee896b3b49f269d7da0.jar" />
+    </item>
+    <item
+        jar="/Users/Andy/Dropbox/Projects/HTN2015/app/build/intermediates/exploded-aar/com.thalmic/myosdk/0.10.0/jars/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="d189db75174a41996c33bb243d2228aacf10fa53">
+        <dex dex="/Users/Andy/Dropbox/Projects/HTN2015/app/build/intermediates/pre-dexed/debug/classes-607e722642ffa9086cc1def7cd80ab5331f6d657.jar" />
+    </item>
+    <item
+        jar="/Users/Andy/Dropbox/Projects/CardBoardTest/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4e86306289ace4aa0cfec44a05ed2b410d36989d">
+        <dex dex="/Users/Andy/Dropbox/Projects/CardBoardTest/app/build/intermediates/pre-dexed/debug/classes-1a10fc1415630519c43a2ceb060d70280571a782.jar" />
+    </item>
+    <item
+        jar="/Users/Andy/Dropbox/Projects/CardBoardTest/app/libs/cardboard.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="7800973ef52ae629978ad974370b6a0b9bc79e25">
+        <dex dex="/Users/Andy/Dropbox/Projects/CardBoardTest/app/build/intermediates/pre-dexed/debug/cardboard-7b7b41f95a3865fe7e033ead569b43e65c15a1ba.jar" />
+    </item>
+    <item
+        jar="/Users/Andy/Dropbox/Projects/HTN2015/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4e86306289ace4aa0cfec44a05ed2b410d36989d">
+        <dex dex="/Users/Andy/Dropbox/Projects/HTN2015/app/build/intermediates/pre-dexed/debug/classes-e67aff70be3e74095cef4491a86fe836610b1d78.jar" />
+    </item>
+
+</items>
