@@ -22,7 +22,13 @@ public class Translate {
     public static void translateImage(byte[] data, final Activity activity){
         translatedText = "";
         Bitmap bitmap = BitmapFactory.decodeByteArray(data, 0, data.length);
-        storeImage(bitmap, activity);
+        SaveFileAsyncTask saveFileAsyncTask = new SaveFileAsyncTask(activity, bitmap, new SaveFileAsyncTask.Callback() {
+            @Override
+            public void onComplete(Object o, Error error) {
+                // do nothing
+            }
+        });
+        saveFileAsyncTask.execute();
 
 
         File dir = getStorageDirectory(activity);
@@ -57,41 +63,7 @@ public class Translate {
         ocrAsyncTask.execute();
     }
 
-    private static void storeImage(Bitmap image, Activity activity) {
-        File pictureFile = getOutputMediaFile(activity);
-        if (pictureFile == null) {
-            Log.d(TAG,
-                    "Error creating media file, check storage permissions: ");// e.getMessage());
-            return;
-        }
-        try {
-            FileOutputStream fos = new FileOutputStream(pictureFile);
-            image.compress(Bitmap.CompressFormat.PNG, 90, fos);
-            fos.close();
-        } catch (FileNotFoundException e) {
-            Log.d(TAG, "File not found: " + e.getMessage());
-        } catch (IOException e) {
-            Log.d(TAG, "Error accessing file: " + e.getMessage());
-        }
-    }
 
-    /** Create a File for saving an image or video */
-    private static File getOutputMediaFile(Activity activity){
-        File mediaStorageDir = new File(Environment.getExternalStorageDirectory()
-                + "/Android/data/"
-                + activity.getPackageName()
-                + "/Files");
-        if (! mediaStorageDir.exists()){
-            if (! mediaStorageDir.mkdirs()){
-                return null;
-            }
-        }
-        String timeStamp = new SimpleDateFormat("ddMMyyyy_HHmm").format(new Date());
-        File mediaFile;
-        String mImageName="MI_"+ timeStamp +".jpg";
-        mediaFile = new File(mediaStorageDir.getPath() + File.separator + mImageName);
-        return mediaFile;
-    }
 
     public static File getStorageDirectory(Activity activity) {
         //Log.d(TAG, "getStorageDirectory(): API level is " + Integer.valueOf(android.os.Build.VERSION.SDK_INT));
