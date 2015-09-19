@@ -30,9 +30,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-/**
- * Contains two sub-views to provide a simple stereo HUD.
- */
 public class CardboardOverlayView extends LinearLayout {
     private static final String TAG = CardboardOverlayView.class.getSimpleName();
     private final CardboardOverlayEyeView mLeftView;
@@ -44,7 +41,7 @@ public class CardboardOverlayView extends LinearLayout {
         setOrientation(HORIZONTAL);
 
         LayoutParams params = new LayoutParams(
-            LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT, 1.0f);
+                LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT, 1.0f);
         params.setMargins(0, 0, 0, 0);
 
         mLeftView = new CardboardOverlayEyeView(context, attrs);
@@ -77,8 +74,13 @@ public class CardboardOverlayView extends LinearLayout {
     }
 
     private abstract class EndAnimationListener implements Animation.AnimationListener {
-        @Override public void onAnimationRepeat(Animation animation) {}
-        @Override public void onAnimationStart(Animation animation) {}
+        @Override
+        public void onAnimationRepeat(Animation animation) {
+        }
+
+        @Override
+        public void onAnimationStart(Animation animation) {
+        }
     }
 
     private void setDepthOffset(float offset) {
@@ -104,7 +106,7 @@ public class CardboardOverlayView extends LinearLayout {
     /**
      * A simple view group containing some horizontally centered text underneath a horizontally
      * centered image.
-     *
+     * <p/>
      * This is a helper class for CardboardOverlayView.
      */
     private class CardboardOverlayEyeView extends ViewGroup {
@@ -167,15 +169,15 @@ public class CardboardOverlayView extends LinearLayout {
             float leftMargin = (int) (width * (imageMargin + offset));
             float topMargin = (int) (height * (imageMargin + verticalImageOffset));
             imageView.layout(
-                (int) leftMargin, (int) topMargin,
-                (int) (leftMargin + width * imageSize), (int) (topMargin + height * imageSize));
+                    (int) leftMargin, (int) topMargin,
+                    (int) (leftMargin + width * imageSize), (int) (topMargin + height * imageSize));
 
             // Layout TextView
             leftMargin = offset * width;
             topMargin = height * verticalTextPos;
             textView.layout(
-                (int) leftMargin, (int) topMargin,
-                (int) (leftMargin + width), (int) (topMargin + height * (1.0f - verticalTextPos)));
+                    (int) leftMargin, (int) topMargin,
+                    (int) (leftMargin + width), (int) (topMargin + height * (1.0f - verticalTextPos)));
         }
     }
 }
