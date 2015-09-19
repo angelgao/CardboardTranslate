@@ -265,7 +265,8 @@ public class MainActivity extends CardboardActivity implements CardboardView.Ste
             public void onPose(Myo myo, long timestamp, Pose pose) {
 //                showToast("Pose: " + pose);
                 if (camera != null) {
-                    if (pose != Pose.REST) {
+                    Log.e("MyoPose", pose.toString());
+                    if (pose == Pose.FIST) {
                         camera.takePicture(null, null, mPicture);
                     }
                 }

@@ -8,6 +8,11 @@ import android.util.Log;
 import android.widget.Toast;
 
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class Translate {
     public static final String DOWNLOAD_BASE = "http://tesseract-ocr.googlecode.com/files/";
@@ -17,6 +22,9 @@ public class Translate {
     public static void translateImage(byte[] data, final Activity activity){
         translatedText = "";
         Bitmap bitmap = BitmapFactory.decodeByteArray(data, 0, data.length);
+        storeImage(bitmap, activity);
+
+
         File dir = getStorageDirectory(activity);
         OcrAsyncTask ocrAsyncTask = new OcrAsyncTask(activity, bitmap, dir.toString(), new OcrAsyncTask.Callback() {
             @Override
@@ -47,6 +55,42 @@ public class Translate {
             }
         });
         ocrAsyncTask.execute();
+    }
+
+    private static void storeImage(Bitmap image, Activity activity) {
+        File pictureFile = getOutputMediaFile(activity);
+        if (pictureFile == null) {
+            Log.d(TAG,
+                    "Error creating media file, check storage permissions: ");// e.getMessage());
+            return;
+        }
+        try {
+            FileOutputStream fos = new FileOutputStream(pictureFile);
+            image.compress(Bitmap.CompressFormat.PNG, 90, fos);
+            fos.close();
+        } catch (FileNotFoundException e) {
+            Log.d(TAG, "File not found: " + e.getMessage());
+        } catch (IOException e) {
+            Log.d(TAG, "Error accessing file: " + e.getMessage());
+        }
+    }
+
+    /** Create a File for saving an image or video */
+    private static File getOutputMediaFile(Activity activity){
+        File mediaStorageDir = new File(Environment.getExternalStorageDirectory()
+                + "/Android/data/"
+                + activity.getPackageName()
+                + "/Files");
+        if (! mediaStorageDir.exists()){
+            if (! mediaStorageDir.mkdirs()){
+                return null;
+            }
+        }
+        String timeStamp = new SimpleDateFormat("ddMMyyyy_HHmm").format(new Date());
+        File mediaFile;
+        String mImageName="MI_"+ timeStamp +".jpg";
+        mediaFile = new File(mediaStorageDir.getPath() + File.separator + mImageName);
+        return mediaFile;
     }
 
     public static File getStorageDirectory(Activity activity) {

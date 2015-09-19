@@ -25,13 +25,6 @@ public class OcrAsyncTask extends AsyncTask<Void, Void, Void> {
     }
 
     @Override
-    protected void onPreExecute() {
-//        dialog.setMessage("Processing image...");
-//        dialog.setCancelable(false);
-//        dialog.show();
-    }
-
-    @Override
     protected Void doInBackground(Void... params) {
         TessOCR tesseract = new TessOCR(mDatapath);
 
