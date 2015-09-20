@@ -20,6 +20,16 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true" />
 
+
+    <Button
+        android:id="@+id/zoom"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:text="Test zoom"
+        />
+
     <Button
         android:id="@+id/take_picture"
         android:layout_width="100dp"

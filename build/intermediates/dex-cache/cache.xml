@@ -2,25 +2,60 @@
 <items version="2" >
 
     <item
-        jar="/Users/Andy/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.3/5fc52c41ef0239d1093a1eb7c3697036183677ce/gson-2.3.jar"
+        jar="C:\1.backup\adt-bundle-windows-x86_64-20140321\adt-bundle-windows-x86_64-20140321\sdk\extras\android\m2repository\com\android\support\support-annotations\22.0.0\support-annotations-22.0.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="685d0b2c590447e85284ed84712cb363ba04eff8">
+        <dex dex="C:\Users\angel@waterloo\Documents\GitHub\HTN2015\app\build\intermediates\pre-dexed\debug\support-annotations-22.0.0-2475dca500e6a7507db14c282bc9319330c15a78.jar" />
+    </item>
+    <item
+        jar="C:\Users\angel@waterloo\Documents\GitHub\HTN2015\app\libs\cardboard.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="7800973ef52ae629978ad974370b6a0b9bc79e25">
+        <dex dex="C:\Users\angel@waterloo\Documents\GitHub\HTN2015\app\build\intermediates\pre-dexed\debug\cardboard-443d4b8733e1cbf9b1d1e3f80c6b31d3b3ec7762.jar" />
+    </item>
+    <item
+        jar="C:\Users\angel@waterloo\Documents\GitHub\HTN2015\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.0.0\jars\libs\internal_impl-22.0.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="b5b92f469d515a13d778900f6d50c03d12f35504">
+        <dex dex="C:\Users\angel@waterloo\Documents\GitHub\HTN2015\app\build\intermediates\pre-dexed\debug\internal_impl-22.0.0-e71fc5fbd03b06b4f79b3f425c2ef1c5a25083b9.jar" />
+    </item>
+    <item
+        jar="C:\Users\angel@waterloo\Documents\GitHub\HTN2015\app\build\intermediates\exploded-aar\com.thalmic\myosdk\0.10.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="d189db75174a41996c33bb243d2228aacf10fa53">
+        <dex dex="C:\Users\angel@waterloo\Documents\GitHub\HTN2015\app\build\intermediates\pre-dexed\debug\classes-b55defe366b5f417d1ab69a5031631cd3ed0f13d.jar" />
+    </item>
+    <item
+        jar="C:\Users\angel@waterloo\Documents\GitHub\HTN2015\app\build\intermediates\exploded-aar\HTN2015\tess-two\unspecified\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="36f40012b5139263543ddf238cd88d7983530ee2">
+        <dex dex="C:\Users\angel@waterloo\Documents\GitHub\HTN2015\app\build\intermediates\pre-dexed\debug\classes-f7b36fe888bfdcb4bc0ea60c2f54d812d3ed3e2d.jar" />
+    </item>
+    <item
+        jar="C:\Users\angel@waterloo\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.3\5fc52c41ef0239d1093a1eb7c3697036183677ce\gson-2.3.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="5fc52c41ef0239d1093a1eb7c3697036183677ce">
-        <dex dex="/Users/Andy/Dropbox/Projects/HTN2015/app/build/intermediates/pre-dexed/debug/gson-2.3-f7758f4767e98512dab7bbb118b0aa7db3a983c9.jar" />
+        <dex dex="C:\Users\angel@waterloo\Documents\GitHub\HTN2015\app\build\intermediates\pre-dexed\debug\gson-2.3-e32c4d44413894acb89e1068bba90e30a957fe7c.jar" />
     </item>
     <item
-        jar="/Users/Andy/Dropbox/Projects/HTN2015/app/libs/jtar-1.1.jar"
+        jar="C:\Users\angel@waterloo\Documents\GitHub\HTN2015\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.0.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4e86306289ace4aa0cfec44a05ed2b410d36989d">
+        <dex dex="C:\Users\angel@waterloo\Documents\GitHub\HTN2015\app\build\intermediates\pre-dexed\debug\classes-b973e6dfba7591d9af2027b5a7291bfae6e8287f.jar" />
+    </item>
+    <item
+        jar="C:\Users\angel@waterloo\Documents\GitHub\HTN2015\app\libs\jtar-1.1.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="3852e8d03269dfdb3500175cb09fd7c47a6b4515">
-        <dex dex="/Users/Andy/Dropbox/Projects/HTN2015/app/build/intermediates/pre-dexed/debug/jtar-1.1-cf26f00995faaa7238825a9863816ec13ce9e048.jar" />
-    </item>
-    <item
-        jar="/Users/Andy/Dropbox/Projects/HTN2015/app/build/intermediates/exploded-aar/HTN2015/tess-two/unspecified/jars/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="334109bb701dbcfc7e6d709296b53d7689cbc8c3">
-        <dex dex="/Users/Andy/Dropbox/Projects/HTN2015/app/build/intermediates/pre-dexed/debug/classes-0f97b760dadeaca7998880e214e991eaa8d516ee.jar" />
+        <dex dex="C:\Users\angel@waterloo\Documents\GitHub\HTN2015\app\build\intermediates\pre-dexed\debug\jtar-1.1-993d628692677c2b2fdcb130176c7865b047d0cd.jar" />
     </item>
 
 </items>
