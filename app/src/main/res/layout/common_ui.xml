@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
     android:id="@+id/ui_layout"
-    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent" >
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
 
 
     <com.google.vrtoolkit.cardboard.CardboardView
         android:id="@+id/cardboard_view"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"/>
 
     <com.sveder.cardboardpassthrough.CardboardOverlayView
         android:id="@+id/overlay"
@@ -24,21 +25,58 @@
     <Button
         android:id="@+id/zoom"
         android:layout_width="100dp"
-        android:layout_height="40dp"
-        android:layout_alignParentTop="true"
+        android:layout_height="100dp"
         android:layout_alignParentRight="true"
-        android:text="Test zoom"
-        android:visibility="invisible"
+        android:layout_alignParentTop="true"
+        android:text=" "
+        android:background="@android:color/transparent"
         />
 
     <Button
         android:id="@+id/take_picture"
         android:layout_width="100dp"
-        android:layout_height="40dp"
-        android:layout_alignParentTop="true"
+        android:layout_height="100dp"
         android:layout_alignParentLeft="true"
-        android:text="Take Picture"
-        android:visibility="invisible"
+        android:layout_alignParentTop="true"
+        android:text=" "
+        android:background="@android:color/transparent"
         />
+
+    <LinearLayout
+        android:id="@+id/progress_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:visibility="invisible">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal">
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal">
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 </RelativeLayout>

@@ -29,6 +29,7 @@ import android.os.Environment;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.google.vrtoolkit.cardboard.CardboardActivity;
@@ -72,6 +73,7 @@ public class MainActivity extends CardboardActivity implements CardboardView.Ste
     private Camera.PictureCallback mPicture;
     private Button takePicture;
     private Button zoom;
+    private LinearLayout progressBar;
     private DeviceListener mListener;
     int currentZoomLevel = 0;
 
@@ -240,6 +242,8 @@ public class MainActivity extends CardboardActivity implements CardboardView.Ste
                 camera.startPreview();
             }
         };
+
+        progressBar = (LinearLayout) findViewById(R.id.progress_bar);
 
         mOverlayView = (CardboardOverlayView) findViewById(R.id.overlay);
         //mOverlayView.show3DToast("Pull the magnet when you find an object.");
@@ -520,6 +524,14 @@ public class MainActivity extends CardboardActivity implements CardboardView.Ste
 
     public void showText(String text) {
         mOverlayView.show3DToast(text, Color.GREEN);
+    }
+
+    public void toggleProgessBar(boolean show) {
+        if (show) {
+            progressBar.setVisibility(View.VISIBLE);
+        } else {
+            progressBar.setVisibility(View.INVISIBLE);
+        }
     }
 
     @Override

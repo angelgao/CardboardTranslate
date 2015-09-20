@@ -1,8 +1,6 @@
 package com.sveder.cardboardpassthrough;
 
 import android.app.Activity;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.Environment;
 import android.util.Log;
 import android.widget.Toast;
@@ -17,6 +15,10 @@ public class Translate {
     public static void translateImage(byte[] data, final Activity activity){
         translatedText = "";
         File dir = getStorageDirectory(activity);
+
+        MainActivity main = (MainActivity) activity;
+        main.toggleProgessBar(true);
+
         OcrAsyncTask ocrAsyncTask = new OcrAsyncTask(activity, data, dir.toString(), new OcrAsyncTask.Callback() {
             @Override
             public void onComplete(Object o, Error error) {
@@ -30,6 +32,7 @@ public class Translate {
                 float gibberishRatio = ((float) stripped.length()) / excerpt.length();
                 if(gibberishRatio < 0.75){
                     MainActivity main = (MainActivity) activity;
+                    main.toggleProgessBar(false);
                     main.showText("Text not recognized. Try again.");
                 }else {
                     TranslateAsyncTask translateAsyncTask = new TranslateAsyncTask(excerpt, "FR", "EN", new TranslateAsyncTask.Callback() {
@@ -44,6 +47,7 @@ public class Translate {
                             translatedText = translation.data.translations.get(0).translatedText;
 //                        Toast.makeText(activity, translatedText, Toast.LENGTH_SHORT).show();
                             MainActivity main = (MainActivity) activity;
+                            main.toggleProgessBar(false);
                             main.showText(translatedText);
                             Log.e("TranslateAsyncTask", translatedText);
                         }
