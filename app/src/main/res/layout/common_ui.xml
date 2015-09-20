@@ -18,8 +18,8 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true" />
-
+        android:layout_alignParentTop="true"
+        />
 
     <Button
         android:id="@+id/zoom"
@@ -28,6 +28,7 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
         android:text="Test zoom"
+        android:visibility="invisible"
         />
 
     <Button
@@ -37,6 +38,7 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:text="Take Picture"
+        android:visibility="invisible"
         />
 
 </RelativeLayout>
