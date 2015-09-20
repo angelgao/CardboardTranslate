@@ -36,10 +36,12 @@ import com.google.vrtoolkit.cardboard.EyeTransform;
 import com.google.vrtoolkit.cardboard.HeadTransform;
 import com.google.vrtoolkit.cardboard.Viewport;
 import com.thalmic.myo.AbstractDeviceListener;
+import com.thalmic.myo.Arm;
 import com.thalmic.myo.DeviceListener;
 import com.thalmic.myo.Hub;
 import com.thalmic.myo.Myo;
 import com.thalmic.myo.Pose;
+import com.thalmic.myo.XDirection;
 import com.thalmic.myo.scanner.ScanActivity;
 
 import java.io.File;
@@ -271,6 +273,16 @@ public class MainActivity extends CardboardActivity implements CardboardView.Ste
                     }
                 }
             }
+
+            @Override
+            public void onArmSync(Myo myo, long timestamp, Arm arm, XDirection xDirection) {
+                showToast(myo.getArm() == Arm.LEFT ? "Left arm Synced" : "Right Arm Synced");
+            }
+
+            @Override
+            public void onArmUnsync(Myo myo, long timestamp) {
+                showToast("Unsynced");
+            }
         };
 
         Hub hub = Hub.getInstance();
@@ -457,12 +469,15 @@ public class MainActivity extends CardboardActivity implements CardboardView.Ste
         mOverlayView.show3DToast(text);
     }
 
-//    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-//        if (requestCode == CONNECT_MYO_REQUEST) {
-//            Hub.getInstance().setLockingPolicy(Hub.LockingPolicy.NONE);
-//            Hub.getInstance().addListener(mListener);
-//            Toast.makeText(getParent(), "Connected", Toast.LENGTH_SHORT).show();
-//        }
-//    }
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        // We don't want any callbacks when the Activity is gone, so unregister the listener.
+        Hub.getInstance().removeListener(mListener);
+        if (isFinishing()) {
+            // The Activity is finishing, so shutdown the Hub. This will disconnect from the Myo.
+            Hub.getInstance().shutdown();
+        }
+    }
 
 }
