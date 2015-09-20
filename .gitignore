@@ -48,3 +48,5 @@ obj/
 *.ipr
 *~
 *.swp
+
+tess-two/
