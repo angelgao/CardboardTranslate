@@ -26,7 +26,7 @@ public class TranslateAsyncTask extends AsyncTask<Void, Void, Void> {
     private Error error;
 
     public TranslateAsyncTask(String text, String from, String to, Callback callback) {
-        this.text = text.replaceAll("[^A-Za-zùûüÿàâæçéèêëïîôœ]", "");
+        this.text = text;
         this.callback = callback;
         fromLang = from;
         toLang = to;

@@ -11,7 +11,7 @@ import com.googlecode.leptonica.android.ReadFile;
 
 public class OcrAsyncTask extends AsyncTask<Void, Void, Void> {
 
-    private Pix mBitmap;
+    private byte[] data;
     private Callback mCallback;
     private ProgressDialog dialog;
     private String mDatapath;
@@ -20,18 +20,16 @@ public class OcrAsyncTask extends AsyncTask<Void, Void, Void> {
 
     public OcrAsyncTask(Activity activity, byte[] data, String datapath, Callback callback) {
         mDatapath = datapath;
-        mBitmap = ReadFile.readBitmap(BitmapFactory.decodeByteArray(data, 0, data.length));
         mCallback = callback;
+        this.data = data;
         dialog = new ProgressDialog(activity);
     }
 
     @Override
     protected Void doInBackground(Void... params) {
         TessOCR tesseract = new TessOCR(mDatapath);
-
-        excerpt = tesseract.getOCRResult(mBitmap);
-        excerpt = excerpt.replaceAll("\n", " ");
-        excerpt = excerpt.replaceAll("  ", "\n\n");
+        Pix pix = ReadFile.readBitmap(BitmapFactory.decodeByteArray(data, 0, data.length));
+        excerpt = tesseract.getOCRResult(pix);
         excerpt = excerpt.replaceAll("\\p{Pd}", "-");
 
         return null;

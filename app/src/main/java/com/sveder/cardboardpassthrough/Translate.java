@@ -26,23 +26,30 @@ public class Translate {
                     return;
                 }
                 String excerpt = (String) o;
-                TranslateAsyncTask translateAsyncTask = new TranslateAsyncTask(excerpt, "FR", "EN", new TranslateAsyncTask.Callback() {
-                    @Override
-                    public void onComplete(Object o, Error error) {
-                        if (error != null) {
-                            Toast.makeText(activity, "Translate Error: " + error.getMessage(), Toast.LENGTH_SHORT).show();
-                            Log.e("TranslateAsyncTask", error.getMessage());
-                            return;
-                        }
-                        DataWrapper translation = (DataWrapper) o;
-                        translatedText = translation.data.translations.get(0).translatedText;
+                String stripped = excerpt.replaceAll("[^ A-Za-zùûüÿàâæçéèêëïîôœ]", "");
+                float gibberishRatio = ((float) stripped.length()) / excerpt.length();
+                if(gibberishRatio < 0.75){
+                    MainActivity main = (MainActivity) activity;
+                    main.showText("Text not recognized. Try again.");
+                }else {
+                    TranslateAsyncTask translateAsyncTask = new TranslateAsyncTask(excerpt, "FR", "EN", new TranslateAsyncTask.Callback() {
+                        @Override
+                        public void onComplete(Object o, Error error) {
+                            if (error != null) {
+                                Toast.makeText(activity, "Translate Error: " + error.getMessage(), Toast.LENGTH_SHORT).show();
+                                Log.e("TranslateAsyncTask", error.getMessage());
+                                return;
+                            }
+                            DataWrapper translation = (DataWrapper) o;
+                            translatedText = translation.data.translations.get(0).translatedText;
 //                        Toast.makeText(activity, translatedText, Toast.LENGTH_SHORT).show();
-                        MainActivity main = (MainActivity) activity;
-                        main.showText(translatedText);
-                        Log.e("TranslateAsyncTask", translatedText);
-                    }
-                });
-                translateAsyncTask.execute();
+                            MainActivity main = (MainActivity) activity;
+                            main.showText(translatedText);
+                            Log.e("TranslateAsyncTask", translatedText);
+                        }
+                    });
+                    translateAsyncTask.execute();
+                }
             }
         });
         ocrAsyncTask.execute();
