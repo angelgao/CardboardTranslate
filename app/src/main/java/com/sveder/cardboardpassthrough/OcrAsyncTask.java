@@ -3,6 +3,7 @@ package com.sveder.cardboardpassthrough;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 
 import com.googlecode.leptonica.android.Pix;
@@ -17,9 +18,9 @@ public class OcrAsyncTask extends AsyncTask<Void, Void, Void> {
 
     private String excerpt;
 
-    public OcrAsyncTask(Activity activity, Bitmap bitmap, String datapath, Callback callback) {
+    public OcrAsyncTask(Activity activity, byte[] data, String datapath, Callback callback) {
         mDatapath = datapath;
-        mBitmap = ReadFile.readBitmap(bitmap);
+        mBitmap = ReadFile.readBitmap(BitmapFactory.decodeByteArray(data, 0, data.length));
         mCallback = callback;
         dialog = new ProgressDialog(activity);
     }
