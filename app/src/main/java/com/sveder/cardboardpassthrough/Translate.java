@@ -8,11 +8,6 @@ import android.util.Log;
 import android.widget.Toast;
 
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 public class Translate {
     public static final String DOWNLOAD_BASE = "http://tesseract-ocr.googlecode.com/files/";
@@ -22,13 +17,13 @@ public class Translate {
     public static void translateImage(byte[] data, final Activity activity){
         translatedText = "";
         Bitmap bitmap = BitmapFactory.decodeByteArray(data, 0, data.length);
-        SaveFileAsyncTask saveFileAsyncTask = new SaveFileAsyncTask(activity, bitmap, new SaveFileAsyncTask.Callback() {
-            @Override
-            public void onComplete(Object o, Error error) {
-                // do nothing
-            }
-        });
-        saveFileAsyncTask.execute();
+//        SaveFileAsyncTask saveFileAsyncTask = new SaveFileAsyncTask(activity, bitmap, new SaveFileAsyncTask.Callback() {
+//            @Override
+//            public void onComplete(Object o, Error error) {
+//                // do nothing
+//            }
+//        });
+//        saveFileAsyncTask.execute();
 
 
         File dir = getStorageDirectory(activity);
