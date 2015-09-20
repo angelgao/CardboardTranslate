@@ -30,6 +30,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.vrtoolkit.cardboard.CardboardActivity;
@@ -74,6 +75,8 @@ public class MainActivity extends CardboardActivity implements CardboardView.Ste
     private Button takePicture;
     private Button zoom;
     private LinearLayout progressBar;
+    private TextView zoomTextLeft;
+    private TextView zoomTextRight;
     private DeviceListener mListener;
     int currentZoomLevel = 0;
 
@@ -243,6 +246,8 @@ public class MainActivity extends CardboardActivity implements CardboardView.Ste
             }
         };
 
+        zoomTextLeft = (TextView) findViewById(R.id.zoom_text_left);
+        zoomTextRight = (TextView) findViewById(R.id.zoom_text_right);
         progressBar = (LinearLayout) findViewById(R.id.progress_bar);
 
         mOverlayView = (CardboardOverlayView) findViewById(R.id.overlay);
@@ -297,7 +302,9 @@ public class MainActivity extends CardboardActivity implements CardboardView.Ste
                     if (pose == Pose.FIST || pose == Pose.FINGERS_SPREAD) {
                         camera.takePicture(null, null, mPicture);
                     } else if (pose == Pose.WAVE_IN) {
-                        mOverlayView.show3DToast("Zoom in", Color.GRAY);
+                        zoomTextLeft.setText("Zoom In");
+                        zoomTextRight.setText("Zoom In");
+//                        mOverlayView.show3DToast("Zoom in", Color.GRAY);
                         zoomTmr.scheduleAtFixedRate(new TimerTask() {
                             @Override
                             public void run() {
@@ -310,7 +317,9 @@ public class MainActivity extends CardboardActivity implements CardboardView.Ste
                             }
                         }, 500, 200);
                     } else if (pose == Pose.WAVE_OUT){
-                        mOverlayView.show3DToast("Zoom out", Color.GRAY);
+                        zoomTextLeft.setText("Zoom Out");
+                        zoomTextRight.setText("Zoom Out");
+//                        mOverlayView.show3DToast("Zoom out", Color.GRAY);
                         zoomTmr.scheduleAtFixedRate(new TimerTask() {
                             @Override
                             public void run() {
@@ -324,6 +333,8 @@ public class MainActivity extends CardboardActivity implements CardboardView.Ste
                         }, 500, 200);
                     } else if (pose == Pose.REST){
                         if(zoomTmr != null){
+                            zoomTextLeft.setText("");
+                            zoomTextRight.setText("");
                             zoomTmr.cancel();
                             zoomTmr = new Timer();
                         }
