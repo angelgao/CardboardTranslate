@@ -18,6 +18,7 @@ package com.sveder.cardboardpassthrough;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.SurfaceTexture;
 import android.graphics.SurfaceTexture.OnFrameAvailableListener;
 import android.hardware.Camera;
@@ -241,7 +242,7 @@ public class MainActivity extends CardboardActivity implements CardboardView.Ste
         };
 
         mOverlayView = (CardboardOverlayView) findViewById(R.id.overlay);
-        mOverlayView.show3DToast("Pull the magnet when you find an object.");
+        //mOverlayView.show3DToast("Pull the magnet when you find an object.");
 
         takePicture = (Button) findViewById(R.id.take_picture);
         takePicture.setOnClickListener(
@@ -259,16 +260,12 @@ public class MainActivity extends CardboardActivity implements CardboardView.Ste
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        if (!camera.getParameters().isZoomSupported()){
-                            showToast("zoom not supported!");
-                        } else {
-                            showToast("zoom supported");
-                            if(currentZoomLevel < camera.getParameters().getMaxZoom() - 3){
-                                currentZoomLevel += 3;
-                                Camera.Parameters p = camera.getParameters();
-                                p.setZoom(currentZoomLevel);
-                                camera.setParameters(p);
-                            }
+
+                        if(currentZoomLevel < camera.getParameters().getMaxZoom() - 3){
+                            currentZoomLevel += 3;
+                            Camera.Parameters p = camera.getParameters();
+                            p.setZoom(currentZoomLevel);
+                            camera.setParameters(p);
                         }
                     }
                 }
@@ -296,13 +293,7 @@ public class MainActivity extends CardboardActivity implements CardboardView.Ste
                     if (pose == Pose.FIST || pose == Pose.FINGERS_SPREAD) {
                         camera.takePicture(null, null, mPicture);
                     } else if (pose == Pose.WAVE_IN) {
-                        showToast("Zoom in");
-//                        if(currentZoomLevel < camera.getParameters().getMaxZoom() - 3){
-//                            currentZoomLevel += 3;
-//                            Camera.Parameters p = camera.getParameters();
-//                            p.setZoom(currentZoomLevel);
-//                            camera.setParameters(p);
-//                        }
+                        mOverlayView.show3DToast("Zoom in", Color.GRAY);
                         zoomTmr.scheduleAtFixedRate(new TimerTask() {
                             @Override
                             public void run() {
@@ -315,13 +306,7 @@ public class MainActivity extends CardboardActivity implements CardboardView.Ste
                             }
                         }, 500, 200);
                     } else if (pose == Pose.WAVE_OUT){
-                        showToast("Zoom out");
-//                        if(currentZoomLevel < camera.getParameters().getMaxZoom() - 3){
-//                            currentZoomLevel -= 3;
-//                            Camera.Parameters p = camera.getParameters();
-//                            p.setZoom(currentZoomLevel);
-//                            camera.setParameters(p);
-//                        }
+                        mOverlayView.show3DToast("Zoom out", Color.GRAY);
                         zoomTmr.scheduleAtFixedRate(new TimerTask() {
                             @Override
                             public void run() {
@@ -334,12 +319,10 @@ public class MainActivity extends CardboardActivity implements CardboardView.Ste
                             }
                         }, 500, 200);
                     } else if (pose == Pose.REST){
-                        showToast("rest");
                         if(zoomTmr != null){
                             zoomTmr.cancel();
                             zoomTmr = new Timer();
                         }
-
                     }
                 }
             }
@@ -536,7 +519,7 @@ public class MainActivity extends CardboardActivity implements CardboardView.Ste
     }
 
     public void showText(String text) {
-        mOverlayView.show3DToast(text);
+        mOverlayView.show3DToast(text, Color.GREEN);
     }
 
     @Override
