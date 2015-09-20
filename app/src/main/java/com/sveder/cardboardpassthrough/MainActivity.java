@@ -52,6 +52,8 @@ import java.nio.FloatBuffer;
 import java.nio.ShortBuffer;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
@@ -68,6 +70,7 @@ public class MainActivity extends CardboardActivity implements CardboardView.Ste
     private Camera camera;
     private Camera.PictureCallback mPicture;
     private Button takePicture;
+    private Button zoom;
     private DeviceListener mListener;
     int currentZoomLevel = 0;
 
@@ -251,9 +254,30 @@ public class MainActivity extends CardboardActivity implements CardboardView.Ste
                 }
         );
 
+        zoom = (Button) findViewById(R.id.zoom);
+        zoom.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        if (!camera.getParameters().isZoomSupported()){
+                            showToast("zoom not supported!");
+                        } else {
+                            showToast("zoom supported");
+                            if(currentZoomLevel < camera.getParameters().getMaxZoom() - 3){
+                                currentZoomLevel += 3;
+                                Camera.Parameters p = camera.getParameters();
+                                p.setZoom(currentZoomLevel);
+                                camera.setParameters(p);
+                            }
+                        }
+                    }
+                }
+        );
+
         mListener = new AbstractDeviceListener() {
             @Override
             public void onConnect(Myo myo, long timestamp) {
+
                 showToast("Connected");
             }
 
@@ -263,13 +287,59 @@ public class MainActivity extends CardboardActivity implements CardboardView.Ste
 
             }
 
+            Timer zoomTmr = new Timer();
+
             @Override
             public void onPose(Myo myo, long timestamp, Pose pose) {
-                showToast("Pose: " + pose);
+
                 if (camera != null) {
-                    Log.e("MyoPose", pose.toString());
-                    if (pose == Pose.WAVE_IN) {
+                    if (pose == Pose.FIST || pose == Pose.FINGERS_SPREAD) {
                         camera.takePicture(null, null, mPicture);
+                    } else if (pose == Pose.WAVE_IN) {
+                        showToast("Zoom in");
+//                        if(currentZoomLevel < camera.getParameters().getMaxZoom() - 3){
+//                            currentZoomLevel += 3;
+//                            Camera.Parameters p = camera.getParameters();
+//                            p.setZoom(currentZoomLevel);
+//                            camera.setParameters(p);
+//                        }
+                        zoomTmr.scheduleAtFixedRate(new TimerTask() {
+                            @Override
+                            public void run() {
+                                if(currentZoomLevel < camera.getParameters().getMaxZoom() - 2) {
+                                    currentZoomLevel += 2;
+                                    Camera.Parameters p = camera.getParameters();
+                                    p.setZoom(currentZoomLevel);
+                                    camera.setParameters(p);
+                                }
+                            }
+                        }, 500, 200);
+                    } else if (pose == Pose.WAVE_OUT){
+                        showToast("Zoom out");
+//                        if(currentZoomLevel < camera.getParameters().getMaxZoom() - 3){
+//                            currentZoomLevel -= 3;
+//                            Camera.Parameters p = camera.getParameters();
+//                            p.setZoom(currentZoomLevel);
+//                            camera.setParameters(p);
+//                        }
+                        zoomTmr.scheduleAtFixedRate(new TimerTask() {
+                            @Override
+                            public void run() {
+                                if(currentZoomLevel > 2) {
+                                    currentZoomLevel -= 2;
+                                    Camera.Parameters p = camera.getParameters();
+                                    p.setZoom(currentZoomLevel);
+                                    camera.setParameters(p);
+                                }
+                            }
+                        }, 500, 200);
+                    } else if (pose == Pose.REST){
+                        showToast("rest");
+                        if(zoomTmr != null){
+                            zoomTmr.cancel();
+                            zoomTmr = new Timer();
+                        }
+
                     }
                 }
             }
