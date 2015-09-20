@@ -16,18 +16,8 @@ public class Translate {
 
     public static void translateImage(byte[] data, final Activity activity){
         translatedText = "";
-        Bitmap bitmap = BitmapFactory.decodeByteArray(data, 0, data.length);
-//        SaveFileAsyncTask saveFileAsyncTask = new SaveFileAsyncTask(activity, bitmap, new SaveFileAsyncTask.Callback() {
-//            @Override
-//            public void onComplete(Object o, Error error) {
-//                // do nothing
-//            }
-//        });
-//        saveFileAsyncTask.execute();
-
-
         File dir = getStorageDirectory(activity);
-        OcrAsyncTask ocrAsyncTask = new OcrAsyncTask(activity, bitmap, dir.toString(), new OcrAsyncTask.Callback() {
+        OcrAsyncTask ocrAsyncTask = new OcrAsyncTask(activity, data, dir.toString(), new OcrAsyncTask.Callback() {
             @Override
             public void onComplete(Object o, Error error) {
                 if (error != null) {

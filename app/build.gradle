@@ -27,7 +27,6 @@ dependencies {
             url 'libs/myorepository'
         }
     }
-
     compile 'com.thalmic:myosdk:0.10.+@aar'
 
     compile project(':tess-two')
